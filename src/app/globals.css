@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-monoton: var(--font-monoton);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --shadow-dark: 1px 0 6px -2px black, -1px 0 4px -2px black;
+  --shadow-light: 1px 0 6px -2px white, -1px 0 4px -2px white;
+
+  /* === Background Colors === */
+  --color-bg-primary: #0D0D0D;      /* Main background */
+  --color-bg-secondary: #1A1A1A;    /* Card or section background */
+  --color-bg-surface: #222222;      /* Slight contrast panels */
+
+  /* === Text Colors === */
+  --color-text-primary: #FFFFFF;    /* Bright white */
+  --color-text-secondary: #D0D0D0;  /* Light gray */
+  --color-text-muted: #A0A0A0;      /* Soft blue-gray */
+
+  /* === Accent / Primary Brand === */
+  --color-accent: #00C16E;          /* Teal/Green accent (used in buttons, icons) */
+  --color-accent-hover: #00A45F;    /* Slightly darker hover version */
+
+  /* === Button === */
+  --color-button-bg: #00C16E;
+  --color-button-text: #FFFFFF;
+
+  /* === Tags, Icons, Cards === */
+  --color-tag-bg: #2C2C2C;
+  --color-card-border: #333333;
+  --color-icon-accent: #00C16E;
+
+  /* === Gradient (if used) === */
+  --color-gradient-start: #00C16E;
+  --color-gradient-end: #007F4B;
+
+  /* === Optional Divider / Lines === */
+  --color-border: #2A2A2A; 
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply dark:bg-bg-primary dark:text-text-primary bg-[#fffcf9] overflow-x-hidden;
 }
+
+@layer utilities {
+  .animate-logo {
+    @apply bg-gradient-to-br from-green-400 to-cyan-400 dark:from-green-600 dark:to-cyan-600 bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: logo-animate 3s ease-in-out infinite;
+  }
+}
+
+@keyframes logo-animate {
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  50% {
+    background-position: 100% 100%;
+    opacity: 0.9;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+}
+
