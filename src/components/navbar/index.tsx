@@ -45,7 +45,7 @@ function Navbar() {
         opacity: 0
       }}
       animate={{
-        width: scrolled ? "50%" : "70%",
+        width: scrolled ? "60%" : "80%",
         y: scrolled ? 20 : 0,
         opacity: 1
       }}
