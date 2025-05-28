@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter, FaLinkedin } from 'react-icons/fa6' 
+import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6' 
 import { TbBrandLinkedinFilled } from 'react-icons/tb'
 
 const Footer = () => {
@@ -9,7 +9,10 @@ const Footer = () => {
       <p className='text-base opacity-75'>
         Made with <span className='text-red-500'>❤</span> by Gourav Malviya
       </p>
-      <div className='flex gap-2'>
+      <div className='flex items-center gap-2'>
+
+        <p className='text-sm opacity-75 uppercase dark:text-text-secondary'>Follow me:</p>
+        
         <Link href="https://x.com/gouravdotcom" target='_blank'>
           <FaSquareXTwitter size={25} className='dark:text-[#000] dark:bg-white rounded hover:scale-110 transition-all ease-in duration-150' />
         </Link>

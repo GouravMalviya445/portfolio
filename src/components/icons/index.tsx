@@ -15,22 +15,22 @@ import { IoLogoHtml5 } from "react-icons/io";
 import { DiCss3 } from "react-icons/di";
 
 export const techIcons = [
-  <FaReact />,
-  <RiNextjsFill />,
-  <BiLogoTypescript />,
-  <SiMongodb />,
-  <RiJavascriptFill />,
-  <BiLogoPostgresql />,
-  <RiTailwindCssFill />,
-  <BsGithub />,
-  <TbBrandFramerMotion />,
-  <SiPostman />,
-  <SiGit />,
-  <SiDocker />,
-  <FaAws />,
-  <SiShadcnui />,
-  <SiExpress />,
-  <FaNodeJs />
+  <FaReact key={1}/>,
+  <RiNextjsFill key={2} />,
+  <BiLogoTypescript key={3} />,
+  <SiMongodb key={4} />,
+  <RiJavascriptFill key={5} />,
+  <BiLogoPostgresql key={6} />,
+  <RiTailwindCssFill key={7} />,
+  <BsGithub key={8} />,
+  <TbBrandFramerMotion key={9} />,
+  <SiPostman key={10} />,
+  <SiGit key={11} />,
+  <SiDocker key={12} />,
+  <FaAws key={13} />,
+  <SiShadcnui key={14} />,
+  <SiExpress key={15} />,
+  <FaNodeJs key={16} />
 ];
 
 type TechStackIcons = {[key:string]: ReactNode}
@@ -42,7 +42,7 @@ export const techStackIcons: TechStackIcons = {
   "javascript": <RiJavascriptFill className="text-[#F7DF1E]" />,
   "postgresql": <BiLogoPostgresql className="text-[#336791]"/>,
   "tailwindcss": <RiTailwindCssFill className="text-[#38B2AC]"/>,
-  "github": <BsGithub className="text-[#181717]"/>,
+  "github": <BsGithub className="text-[#413d3d]"/>,
   "framer motion": <TbBrandFramerMotion className="text-[#FF0080]" />,
   "postman": <SiPostman className="text-[#FF6C37]" />,
   "git": <SiGit className="text-[#F05032]" />,

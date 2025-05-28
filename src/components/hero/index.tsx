@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-import { motion, useAnimate } from 'motion/react';
+import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6';
-import { TbBrandLinkedinFilled } from 'react-icons/tb';
+// import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6';
+// import { TbBrandLinkedinFilled } from 'react-icons/tb';
 
 
 const HeroSection = () => {

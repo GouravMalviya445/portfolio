@@ -2,109 +2,110 @@ import { techStackIcons } from "@/components/icons"
 import { ReactNode } from "react"
 
 type TSkills = {
-  name: string,
-  icon: ReactNode,
-  confidence: string
+  name: string;
+  tech?: string;
+  icon: ReactNode;
+  confidence: string;
 }
 
 export const skills: TSkills[] = [
   {
-    name: "html",
+    name: "HTML",
     icon: techStackIcons["html"],
     confidence: "90%"
   },
   {
-    name: "css",
+    name: "CSS",
     icon: techStackIcons["css"],
     confidence: "90%"
   },
   {
-    name: "javascript",
+    name: "JavaScript",
     icon: techStackIcons["javascript"],
     confidence: "90%"
   },
   {
-    name: "typescript",
+    name: "TypeScript",
     icon: techStackIcons["typescript"],
     confidence: "90%"
   },
   {
-    name: "react",
+    name: "React",
     icon: techStackIcons["react"],
     confidence: "90%"
   },
   {
-    name: "nextjs",
+    name: "NextJS",
     icon: techStackIcons["nextjs"],
     confidence: "70%"
   },
   {
-    name: "tailwindcss",
+    name: "Tailwind CSS",
     icon: techStackIcons["tailwindcss"],
     confidence: "90%"
   },
   {
-    name: "framer motion",
+    name: "Framer Motion",
     icon: techStackIcons["framer motion"],
     confidence: "80%"
   },
   {
-    name: "shadcn",
+    name: "Shadcn UI",
     icon: techStackIcons["shadcn"],
     confidence: "80%"
   },
   {
-    name: "gsap",
+    name: "GSAP",
     icon: techStackIcons["gsap"],
     confidence: "80%"
   },
   {
-    name: "mongodb",
+    name: "MongoDB",
     icon: techStackIcons["mongodb"],
     confidence: "80%"
   },
   {
-    name: "postgresql",
+    name: "PostgreSQL",
     icon: techStackIcons["postgresql"],
     confidence: "80%"
   },
   {
-    name: "git",
+    name: "Git",
     icon: techStackIcons["git"],
     confidence: "90%"
   },
   {
-    name: "github",
+    name: "Github",
     icon: techStackIcons["github"],
     confidence: "90%"
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: techStackIcons["docker"],
     confidence: "80%"
   },
   {
-    name: "aws",
+    name: "AWS",
     icon: techStackIcons["aws"],
     confidence: "80%"
   },
   {
-    name: "postman",
+    name: "Postman",
     icon: techStackIcons["postman"],
     confidence: "80%"
   },
   {
-    name: "express",
+    name: "ExpressJS",
     icon: techStackIcons["express"],
     confidence: "80%"
   },
   {
-    name: "nodejs",
+    name: "NodeJS",
     icon: techStackIcons["nodejs"],
     confidence: "80%"
   },
   {
-    name: "prisma",
+    name: "Prisma",
     icon: techStackIcons["prisma"],
     confidence: "80%"
   },

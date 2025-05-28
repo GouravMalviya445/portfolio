@@ -3,7 +3,6 @@
 import { cn } from '@/lib/utils'
 import { motion } from 'motion/react'
 import React from 'react'
-import { skills } from "@/constants"
 import Button from '../Button';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -31,7 +30,7 @@ const AboutSection = () => {
             "text-sm md:text-base text-gradient"
           )}
         >
-          Hello! I'm Gourav Malviya, a passionate Full Stack Web Developer and a BCA student at the University of Kota. With a strong foundation in both front-end and back-end development, I bring a unique blend of creativity and a knack for crafting efficient, user-centric applications.
+          Hello! I&apos;m Gourav Malviya, a passionate Full Stack Web Developer and a BCA student at the University of Kota. With a strong foundation in both front-end and back-end development, I bring a unique blend of creativity and a knack for crafting efficient, user-centric applications.
           My journey into tech is fueled by a desire to learn, innovate, and contribute to projects that make a difference. I thrive in collaborative environments and am always excited to tackle new challenges.
         </motion.p>
 

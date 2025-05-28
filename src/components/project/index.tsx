@@ -21,7 +21,7 @@ const ProjectSection = () => {
           My Projects
         </motion.h3>
         <motion.p className='text-sm md:text-base px-2 max-w-2xl text-center dark:text-text-muted mt-2'>
-          A showcase of my recent work, personal projects, and experiments. Each card displays the project's key information and technology stack
+          A showcase of my recent work, personal projects, and experiments. Each card displays the project&apos;s key information and technology stack
         </motion.p>
       </motion.div>
 

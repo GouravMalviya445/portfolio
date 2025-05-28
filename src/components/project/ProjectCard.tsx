@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Button from '../Button';
 import { cn } from '@/lib/utils';
 import { techStackIcons } from '../icons';
-import { FaArrowRightLong } from "react-icons/fa6";
 import { BsArrowRight } from 'react-icons/bs';
 
 interface ProjectCardProps {
