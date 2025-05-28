@@ -17,18 +17,14 @@
   --color-text-primary: #FFFFFF;    /* Bright white */
   --color-text-secondary: #D0D0D0;  /* Light gray */
   --color-text-muted: #A0A0A0;      /* Soft blue-gray */
+  --color-text-accent: #00C16E;     /* Teal/Green */
 
   /* === Accent / Primary Brand === */
   --color-accent: #00C16E;          /* Teal/Green accent (used in buttons, icons) */
   --color-accent-hover: #00A45F;    /* Slightly darker hover version */
 
-  /* === Button === */
-  --color-button-bg: #00C16E;
-  --color-button-text: #FFFFFF;
-
   /* === Tags, Icons, Cards === */
   --color-tag-bg: #2C2C2C;
-  --color-card-border: #333333;
   --color-icon-accent: #00C16E;
 
   /* === Gradient (if used) === */
@@ -40,17 +36,38 @@
 }
 
 body {
-  @apply dark:bg-bg-primary dark:text-text-primary bg-[#fffcf9] overflow-x-hidden;
+  @apply dark:bg-bg-primary dark:text-text-primary w-[100%] overflow-x-hidden h-full;
 }
 
 @layer utilities {
+  /* nav logo animation */
   .animate-logo {
     @apply bg-gradient-to-br from-green-400 to-cyan-400 dark:from-green-600 dark:to-cyan-600 bg-clip-text text-transparent;
     background-size: 200% 200%;
     animation: logo-animate 3s ease-in-out infinite;
   }
+
+  .text-gradient {
+    @apply dark:bg-gradient-to-br dark:bg-clip-text dark:text-transparent dark:from-green-400 dark:to-cyan-400 text-transparent;
+  }
+
+  /* project card */
+  .project-card {
+    @apply dark:bg-bg-secondary w-[23rem] rounded-xl p-4 border cursor-pointer dark:border-transparent dark:hover:border-accent/70 flex flex-col gap-4 justify-center transition-all duration-200 ease-linear;
+  }
+
+  /* project card links */
+  .project-card-link {
+    @apply dark:text-text-primary flex items-center gap-2 rounded-lg font-semibold text-sm dark:hover:bg-bg-surface dark:bg-green-900 ;
+  }
+
+  .border-bim-animation {
+    animation: border-animation 2s linear infinite both;
+  }
+
 }
 
+/* logo animation */
 @keyframes logo-animate {
   0% {
     background-position: 0% 50%;
@@ -66,3 +83,18 @@ body {
   }
 }
 
+/* border animation */
+@keyframes border-animation {
+  0% {
+    box-shadow: 2px 0px 4px -1px #00c1a1;
+  }
+  50% {
+    box-shadow: 0px 2px 4px -1px #0062a4;
+  }
+  75% {
+    box-shadow: -2px 0px 4px -1px #9a00c1;
+  }
+  100% {
+    box-shadow: 0px -2px 4px -1px #a40052;
+  }
+}

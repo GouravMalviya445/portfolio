@@ -4,6 +4,7 @@ import "./globals.css";
 import Container from "@/components/Container";
 import Navbar from "@/components/navbar";
 import Lamp from "@/components/Lamp";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,24 +37,27 @@ export default function RootLayout({
         {/* name background */}
         <div className="hidden md:block">
           <div
-            className='md:text-[150px] leading-0 font-extrabold uppercase text-green-300/[.04] absolute -z-10 top-[20vh] left-0'
+            className='md:text-[150px] leading-0 font-extrabold uppercase text-green-300/[.04] absolute -z-10 top-[18vh] left-0'
           >
             Gourav
           </div>
           <div
-            className='md:text-[150px] leading-0 font-extrabold uppercase text-green-300/[.04] absolute -z-10 top-[85vh] right-0'
+            className='md:text-[150px] leading-0 font-extrabold uppercase text-green-300/[.04] absolute -z-10 top-[90vh] right-0'
           >
             Malviya
           </div>
         </div>
       
         
-        <Container>
-          {/* Lame shadow light */}
-          <Lamp/>
-          <Navbar />
-          {children}
-        </Container>
+        <div className="min-h-screen w-screen flex items-center justify-center">
+          <Container>
+            {/* Lame shadow light */}
+            <Lamp/>
+            <Navbar />
+            {children}
+          </Container>
+        </div>
+        <Footer/>
       </body>
     </html>
   );

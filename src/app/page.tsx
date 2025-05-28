@@ -1,11 +1,15 @@
+import AboutSection from "@/components/about";
 import HeroSection from "@/components/hero";
-import TechStackSlider from "@/components/TechStackMarquee";
+import ProjectSection from "@/components/project";
+import TechStackMarquee from "@/components/TechStackMarquee";
 
 export default function Home() {
   return (
     <>
       <HeroSection />  
-      <TechStackSlider />
+      <TechStackMarquee />
+      <AboutSection />
+      <ProjectSection />
     </>
   );
 }
