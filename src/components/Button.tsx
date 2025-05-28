@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { motion } from 'motion/react';
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
 interface ButtonProp extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface ButtonProp extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   tooltipValue?: string;
 }
 
-const defaultClass = "cursor-pointer px-2 py-0.5 rounded-sm transition-all ease-in duration-200 relative"
+const defaultClass = "cursor-pointer flex items-center gap-2 px-2 py-0.5 rounded-sm transition-all ease-in duration-200 relative"
 
 const customClasses = {
   variants: {
@@ -22,7 +22,7 @@ const customClasses = {
     secondary: "dark:bg-gradient-to-br dark:from-gradient-start dark:to-gradient-end dark:text-surface dark:hover:from-gradient-end dark:hover:to-gradient-start",
     link: "group/button-link px-0 py-1.5 text-sm font-semibold",
     outline: "dark:border dark:border-accent/80 dark:hover:text-text-primary dark:text-text-secondary rounded-md",
-    ghost: "dark:hover:bg-bg-secondary dark:border dark:border-border",
+    ghost: "dark:hover:bg-bg-secondary dark:border dark:border-border rounded-lg",
   },
   sizes: {
     sm: "text-xs px-1 py-0.5",

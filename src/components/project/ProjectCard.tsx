@@ -41,7 +41,7 @@ const ProjectCard = ({ title, description, imgSrc, projectUrl, githubUrl, techSt
         
         {/* project links */}
         <motion.div
-          className='group-hover/project-card:flex hidden items-center absolute bottom-2 left-2 space-x-2 z-10'
+          className='lg:group-hover/project-card:flex lg:hidden flex items-center absolute bottom-2 left-2 space-x-2 z-10'
         >
           <Link href={projectUrl} target='_blank'>
             <Button
@@ -68,9 +68,11 @@ const ProjectCard = ({ title, description, imgSrc, projectUrl, githubUrl, techSt
         </motion.div>
       </div>
 
+
+      {/* title and description */}
       <div>
         <span className='text-lg font-semibold dark:text-accent'>{title}</span>
-        <p className='text-sm'>{description}</p>
+        <p className='text-base'>{description}</p>
       </div>
 
       {/* project stack */}

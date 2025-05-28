@@ -4,6 +4,9 @@ import { motion, useAnimate } from 'motion/react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6';
+import { TbBrandLinkedinFilled } from 'react-icons/tb';
+
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -101,6 +104,31 @@ const HeroSection = () => {
           </motion.button>
         </motion.div>        
       </section>  
+
+      {/* Social Links */}
+      {/* <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className={cn(
+          "absolute top-1/3 text-3xl right-10 transform",
+          "flex items-center justify-center gap-2"
+        )}
+      >
+        <Link href="https://x.com/gouravdotcom" target='_blank'>
+          <FaSquareXTwitter className='dark:text-[#000] dark:bg-white rounded-md' />
+        </Link>
+        <Link href="https://instagram.com/https.gouravxx._" target='_blank'>
+          <FaSquareInstagram className='dark:text-pink-500 dark:bg-white rounded-md'/>
+        </Link>
+        <Link href="https://github.com/gouravmalviya445" target='_blank'>
+          <FaSquareGithub className='dark:text-[#000] dark:bg-white rounded-md'/>
+        </Link>
+        <Link href="https://linkedin.com/in/gouravmalviya" target='_blank'>
+          <TbBrandLinkedinFilled className='dark:text-blue-500 dark:bg-white rounded-md'/>
+        </Link>
+      </motion.div> */}
+    
     </div>
   )
 }

@@ -53,16 +53,12 @@ body {
 
   /* project card */
   .project-card {
-    @apply dark:bg-bg-secondary w-[23rem] rounded-xl p-4 border cursor-pointer dark:border-transparent dark:hover:border-accent/70 flex flex-col gap-4 justify-center transition-all duration-200 ease-linear;
+    @apply dark:bg-bg-secondary w-full md:w-[450px] md:min-h-[350px] rounded-xl p-4 border cursor-pointer dark:border-transparent dark:hover:border-accent/70 flex flex-col gap-4 justify-center transition-all duration-200 ease-linear;
   }
 
   /* project card links */
   .project-card-link {
     @apply dark:text-text-primary flex items-center gap-2 rounded-lg font-semibold text-sm dark:hover:bg-bg-surface dark:bg-green-900 ;
-  }
-
-  .border-bim-animation {
-    animation: border-animation 2s linear infinite both;
   }
 
 }
@@ -80,21 +76,5 @@ body {
   100% {
     background-position: 0% 50%;
     opacity: 1;
-  }
-}
-
-/* border animation */
-@keyframes border-animation {
-  0% {
-    box-shadow: 2px 0px 4px -1px #00c1a1;
-  }
-  50% {
-    box-shadow: 0px 2px 4px -1px #0062a4;
-  }
-  75% {
-    box-shadow: -2px 0px 4px -1px #9a00c1;
-  }
-  100% {
-    box-shadow: 0px -2px 4px -1px #a40052;
   }
 }
