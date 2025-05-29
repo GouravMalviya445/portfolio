@@ -36,7 +36,7 @@
 }
 
 body {
-  @apply dark:bg-bg-primary dark:text-text-primary w-[100%] overflow-x-hidden h-full;
+  @apply dark:bg-bg-primary dark:text-text-primary w-[100%] selection:bg-accent/20 overflow-x-hidden h-full;
 }
 
 @layer utilities {

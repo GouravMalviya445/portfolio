@@ -13,6 +13,8 @@ import { SiExpress } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
 import { DiCss3 } from "react-icons/di";
+import { FaJava } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
 
 export const techIcons = [
   <FaReact key={1}/>,
@@ -54,5 +56,8 @@ export const techStackIcons: TechStackIcons = {
   "nodejs": <FaNodeJs className="text-[#3C873A]" />,
   "prisma": <SiPrisma className="text-gray-900 dark:text-white" />,
   "html": <IoLogoHtml5 className="text-[#E34F26]" />,
-  "css": <DiCss3 className="text-[#1572B6]" />
+  "css": <DiCss3 className="text-[#1572B6]" />,
+  "cpp": <Image src="/cpp.svg" width={40} height={40} alt="cpp" />,
+  "java": <FaJava className="text-[#0072C6]" />,
+  "mysql": <SiMysql className="text-[#4479A1]" />
 }

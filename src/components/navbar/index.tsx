@@ -20,8 +20,8 @@ function Navbar() {
       href: "/contact",
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: "Blogs",
+      href: "/blogs",
     },
   ]
 

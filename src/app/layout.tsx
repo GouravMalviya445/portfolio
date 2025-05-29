@@ -49,7 +49,7 @@ export default function RootLayout({
         </div>
       
         
-        <div className="min-h-screen w-screen flex items-center justify-center">
+        <div className="min-h-screen w-screen">
           <Container>
             {/* Lame shadow light */}
             <Lamp/>
