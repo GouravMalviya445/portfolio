@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import Button from '../Button';
+import { IoIosArrowDown } from 'react-icons/io';
 
 function Navbar() {
   const navItems = [
@@ -25,7 +27,27 @@ function Navbar() {
     },
   ]
 
+  const socialAccounts = [
+    {
+      name: "Github",
+      href: "https://github.com/gouravmalviya445",
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/gouravdotcom",
+    },
+    {
+      name: "Linkedin",
+      href: "https://linkedin.com/in/gouravmalviya",
+    },
+    {
+      name: "Instagram",
+      href: "https://instagram.com/https.gouravxx._",
+    }
+  ]
+
   const [hovered, setHovered] = useState<number | null>(null);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const { scrollY } = useScroll();
   
@@ -42,7 +64,7 @@ function Navbar() {
     <motion.nav
       initial={{
         width: "70%",
-        opacity: 0
+        opacity: 0,
       }}
       animate={{
         width: scrolled ? "60%" : "80%",
@@ -54,7 +76,7 @@ function Navbar() {
         ease: "easeInOut"
       }}
       layoutId='navbar'
-      className={cn("max-w-7xl flex fixed top-0 left-1/2 -translate-x-1/2 z-50 justify-between items-center rounded-full px-4 py-3", scrolled && "shadow-dark dark:shadow-none dark:border dark:border-[#04bd92]/20")}
+      className={cn("max-w-7xl flex fixed top-0 left-1/2 -translate-x-1/2 z-50 justify-between items-center rounded-full px-4 py-3", scrolled && "shadow-dark dark:shadow-none dark:border dark:border-[#04bd92]/20 dark:bg-bg-surface/40")}
     >
       {/* logo */}
       <Link className='' href="/">
@@ -86,6 +108,27 @@ function Navbar() {
             {item.title}
           </Link>
         ))}
+      </div>
+
+      <div className='hidden md:block relative'
+        onFocus={() => setShowDropdown(true)}
+        onBlur={() => setShowDropdown(false)}
+      >
+        <Button
+          variant='outline' className='text-sm '
+        >
+          <IoIosArrowDown /> Let&apos;s connect
+        </Button>
+
+        {showDropdown && (
+          <div className='dark:bg-bg-surface/50 overflow-hidden rounded-lg absolute top-[130%] w-full flex flex-col items-center '>
+              {socialAccounts.map((account, index) => (
+                <Link href={account.href} key={index} className='w-full py-0.5 hover:bg-accent/60 text-center transition-all rounded-lg'>
+                  <span>{account.name}</span>
+                </Link>
+              ))}
+          </div>
+        )}
       </div>
     </motion.nav>
   )
