@@ -75,9 +75,9 @@ const HeroSection = () => {
 
         <motion.div className='flex items-center justify-center gap-1 mt-5'>
           <motion.button
-            initial={{ x: -50, opacity: 0 }}
+            initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            // transition={{type: "spring", delay: 1 }}
             className={cn(
               "animate-title inline-block overflow-hidden ml-2 px-3 py-1 font-semibold text-lg",
               "rounded-md text-nowrap dark:bg-gradient-to-br dark:from-gradient-end/40 dark:to-gradient-start/70",
@@ -90,9 +90,9 @@ const HeroSection = () => {
           </motion.button>
 
           <motion.button
-            initial={{ x: 50, opacity: 0 }}
+            initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1, type: "bounce" }}
+            // transition={{ type: "spring", delay: 1 }}
             className={cn(
               "animate-title inline-block overflow-hidden ml-2 px-3 py-1 font-semibold text-lg",
               "rounded-md text-nowrap dark:border dark:border-accent/60 cursor-pointer dark:text-text-secondary dark:hover:text-text-primary",
