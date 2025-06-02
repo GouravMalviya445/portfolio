@@ -1,3 +1,4 @@
+"use client";
 import ProjectPageCard from "@/components/project/ProjectPageCard";
 
 export default function ProjectPage() {

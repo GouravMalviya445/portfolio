@@ -3,10 +3,10 @@ import React from 'react';
 import { motion } from "motion/react";
 import Image from 'next/image';
 import { techStackIcons } from '../icons';
-import { ImGithub } from 'react-icons/im';
 import Link from 'next/link';
 import { LuLink } from 'react-icons/lu';
 import { cn } from '@/lib/utils';
+import Button from '../Button';
 
 interface ProjectPageCardProps {
   title: string;
@@ -23,7 +23,7 @@ const ProjectPageCard = ({ title, description, projectUrl, githubUrl, imgSrc, te
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut", delay: 1 }}
       className='max-w-5xl flex flex-col gap-2 sm:justify-between sm:flex-row-reverse rounded-3xl overflow-hidden dark:bg-bg-secondary sm:px-4'>
       <div className='w-full sm:w-[40%] md:p-3 sm:flex justify-center md:justify-end items-center'>
         <Image
@@ -33,7 +33,7 @@ const ProjectPageCard = ({ title, description, projectUrl, githubUrl, imgSrc, te
           height={200}
           className={cn(
             'w-full h-[200px] sm:rounded-2xl object-cover',
-            "sm:shadow-[0_0_15px] dark:shadow-green-400/40"
+            "sm:shadow-[0_0_15px] dark:shadow-green-400/10"
           )}
         />
       </div>
@@ -76,15 +76,15 @@ const ProjectPageCard = ({ title, description, projectUrl, githubUrl, imgSrc, te
           <div className='flex gap-3'>
             {/* github link */}
             <Link href={githubUrl} target='_blank'>
-              <span className='flex items-center gap-1 dark:text-slate-400'>
-                <ImGithub /> See code
-              </span>
+              <Button variant='link' className='flex items-center gap-2 dark:text-slate-400'>
+                <LuLink /> See code
+              </Button>
             </Link>
             {/* project link */}
             <Link href={projectUrl} target='_blank'>
-              <span className='flex items-center gap-1 dark:text-accent'>
+              <Button variant='link' className='flex items-center gap-2 dark:text-accent'>
                 <LuLink /> Live link
-              </span>
+              </Button>
             </Link>
           </div>
         </div>
