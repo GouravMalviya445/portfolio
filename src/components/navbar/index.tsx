@@ -87,7 +87,7 @@ function Navbar() {
           ease: "easeInOut"
         }}
         layoutId='navbar'
-        className={cn("max-w-7xl hidden md:flex fixed top-0 left-1/2 -translate-x-1/2 z-50 justify-between items-center rounded-full px-4 py-3", scrolled && "shadow-dark dark:shadow-none dark:border dark:border-[#04bd92]/10 dark:bg-bg-secondary")}
+        className={cn("max-w-7xl hidden lg:flex fixed top-0 left-1/2 -translate-x-1/2 z-50 justify-between items-center rounded-full px-4 py-3", scrolled && "shadow-dark dark:shadow-none dark:border dark:border-[#04bd92]/10 dark:bg-bg-secondary")}
       >
         {/* logo */}
         <Link href="/">
@@ -132,7 +132,7 @@ function Navbar() {
           </Button>
 
           {showDropdown && (
-            <div className='dark:bg-bg-surface/50 overflow-hidden rounded-lg absolute top-[130%] w-full flex flex-col items-center '>
+            <div className='dark:bg-bg-surface overflow-hidden rounded-lg absolute top-[130%] w-full flex flex-col items-center '>
                 {socialAccounts.map((account, index) => (
                   <Link href={account.href} key={index} className='w-full py-0.5 hover:bg-accent/60 text-center transition-all rounded-lg'>
                     <span>{account.name}</span>
@@ -149,7 +149,7 @@ function Navbar() {
         initial={{y: -100, opacity: 0}}
         animate={{y: 0, opacity: 1}}
         className={cn(
-          "md:hidden",
+          "lg:hidden",
           "flex items-center justify-between px-3 py-1.5",
           "fixed w-[90%] top-3 left-1/2 -translate-x-1/2 z-50 rounded-full",
           scrolled && "shadow-dark dark:shadow-none dark:border dark:border-[#04bd92]/10 dark:bg-bg-secondary"

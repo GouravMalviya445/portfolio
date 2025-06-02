@@ -6,14 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-const AboutMe = () => {
+const AboutPage = () => {
   const technologies = Object.keys(skills);
   return (
-    <div className="flex flex-col justify-center p-5 min-h-screen mt-[9rem] w-full">
-      <div className="flex justify-between px-10">
+    <div className="flex flex-col justify-center sm:p-5 min-h-screen mt-[9rem] w-full">
+      {/* bio */}
+      <div className="flex justify-between px-5 sm:px-10">
         <div className="max-w-xl">
           <h3
-            className={"text-xl sm:text-2xl md:text-3xl mb-3 font-semibold"}
+            className={"text-2xl sm:text-3xl md:text-4xl mb-3 font-semibold"}
           >
             Who the hell is Gourav?
           </h3>
@@ -38,8 +39,8 @@ const AboutMe = () => {
       </div>
 
       {/* Technologies */}
-      <div className="flex flex-col px-10 mt-14">
-        <h3 className="text-xl sm:text-2xl md:text-3xl mb-3 font-semibold">Technologies I use</h3>
+      <div className="flex flex-col px-5 sm:px-10 mt-14">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl mb-3 font-semibold">Technologies I use</h3>
 
         {/* tech stack */}
         <div className="w-full space-y-5 mt-2">
@@ -71,6 +72,7 @@ const AboutMe = () => {
         </div>
       </div>
       
+      {/* navigation for contact page */}
       <div className="grid place-content-center mt-10 mb-5">
         <Link href="/contact">
           <Button variant='outline' className='group/link'>
@@ -83,4 +85,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default AboutPage;
